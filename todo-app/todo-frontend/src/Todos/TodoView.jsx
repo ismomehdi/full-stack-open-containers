@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
 import axios from '../util/apiClient'
 
-import List from './List'
 import Form from './Form'
+import List from './List'
 
 const TodoView = () => {
   const [todos, setTodos] = useState([])
-
+  
   const refreshTodos = async () => {
     const { data } = await axios.get('/todos')
     setTodos(data)
