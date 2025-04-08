@@ -25,7 +25,7 @@ services:
     image: todo-backend-dev
     build:
       context: ./todo-backend
-      dockerfile: Dockerfile
+      dockerfile: dev.Dockerfile
     volumes:
       - ./todo-backend/:/usr/src/app
     container_name: todo-backend-dev
@@ -41,3 +41,4 @@ services:
     container_name: reverse-proxy
     depends_on:
       - app
+      - server
